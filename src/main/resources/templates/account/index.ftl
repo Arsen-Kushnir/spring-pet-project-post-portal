@@ -30,8 +30,9 @@
                         <#list posts as post >
                             <tr>
                                 <th scope="row">${post.title}</th>
-                                <td>${post.createdAt}</td>
-                                <td><a class="btn btn-outline-dark" href="/posts/${post.id}">View detail</a></td>
+                                <#assign localTime = post.createdAt.toLocalTime() />
+                                <td>${post.createdAt.toLocalDate()} ${localTime.getHour()}:${localTime.getMinute()}</td>
+                                <td><a class="btn btn-outline-dark" href="/posts/${post.id}">View details</a></td>
                             </tr>
                         </#list>
 

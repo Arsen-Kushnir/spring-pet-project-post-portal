@@ -47,20 +47,20 @@ public class UserServiceImpl implements UserService, AdminUserInitializer ,UserD
 
     @Override
     public void create(CreateUserDto createUserDto) {
-        if(!StringUtils.equals(createUserDto.getPassword(), createUserDto.getRepeatedPassword())){
+        if(!StringUtils.equals(createUserDto.getPassword().trim(), createUserDto.getRepeatedPassword().trim())){
             throw new UserPasswordsException("Passwords do not match!");
         }
 
-        if(userRepository.existsByUsername(createUserDto.getUsername())){
+        if(userRepository.existsByUsername(createUserDto.getUsername().trim())){
             throw new UserDuplicationException("User with the specified username already exists!");
         }
 
         User user = User.builder()
-                .firstName(createUserDto.getFirstName())
-                .lastName(createUserDto.getLastName())
+                .firstName(createUserDto.getFirstName().trim())
+                .lastName(createUserDto.getLastName().trim())
                 .age(createUserDto.getAge())
-                .username(createUserDto.getUsername())
-                .password(passwordEncoder.encode(createUserDto.getPassword()))
+                .username(createUserDto.getUsername().trim())
+                .password(passwordEncoder.encode(createUserDto.getPassword().trim()))
                 .role(UserRole.ROLE_USER)
                 .active(true)
                 .build();

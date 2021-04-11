@@ -23,7 +23,8 @@
                                         <div class="btn-group">
                                             <a href="/main/posts/${post.id}" class="btn btn-sm btn-outline-secondary">View</a>
                                         </div>
-                                        <small class="text-muted">${post.createdAt}</small>
+                                        <#assign localTime = post.createdAt.toLocalTime() />
+                                        <small class="text-muted">${post.createdAt.toLocalDate()} ${localTime.getHour()}:${localTime.getMinute()}</small>
                                     </div>
                                 </div>
                             </div>

@@ -34,7 +34,8 @@
             </#if>
 
             <div class="card-footer text-muted">
-                <p class="blog-post-meta">${post.createdAt.toLocalDate()} by <a href="#">${post.authorFullName}</a></p>
+                <#assign localTime = post.createdAt.toLocalTime() />
+                <p class="blog-post-meta">${post.createdAt.toLocalDate()} ${localTime.getHour()}:${localTime.getMinute()} by <a href="#">${post.authorFullName}</a></p>
             </div>
         </div>
     </div>

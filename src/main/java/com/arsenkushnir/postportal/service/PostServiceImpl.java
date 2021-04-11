@@ -35,9 +35,9 @@ public class PostServiceImpl implements PostService{
     public void create(CreatePostDto createPostDto, User user) {
         Post post = Post.builder()
                 .authorUserId(user.getId())
-                .title(createPostDto.getTitle())
-                .anons(createPostDto.getAnons())
-                .fullText(createPostDto.getFullText())
+                .title(createPostDto.getTitle().trim())
+                .anons(createPostDto.getAnons().trim())
+                .fullText(createPostDto.getFullText().trim())
                 .createdAt(LocalDateTime.now())
                 .build();
 
@@ -89,9 +89,9 @@ public class PostServiceImpl implements PostService{
     public void update(CreatePostDto createPostDto, Long id) {
         Post post = getByIdOrThrowException(id);
 
-        post.setTitle(createPostDto.getTitle());
-        post.setAnons(createPostDto.getAnons());
-        post.setFullText(createPostDto.getFullText());
+        post.setTitle(createPostDto.getTitle().trim());
+        post.setAnons(createPostDto.getAnons().trim());
+        post.setFullText(createPostDto.getFullText().trim());
 
         postRepository.save(post);
     }
