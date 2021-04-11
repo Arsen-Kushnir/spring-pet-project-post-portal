@@ -1,0 +1,16 @@
+spring:
+  freemarker:
+    template-loader-path: "classpath:/templates"
+    suffix: ".ftl"
+  datasource:
+    url: ${DB_UR:jdbc:mysql://localhost:3306/post_portal}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:root}
+
+admin:
+  default:
+    first_name: ${ADMIN_DEFAULT_FIRST_NAME:Admin}
+    last_name: ${ADMIN_DEFAULT_LAST_NAME:Admin}
+    age: ${ADMIN_DEFAULT_AGE:20}
+    username: ${ADMIN_DEFAULT_USERNAME:admin}
+    password: ${ADMIN_DEFAULT_PASSWORD:admin}
