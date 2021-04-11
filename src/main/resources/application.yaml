@@ -3,9 +3,9 @@ spring:
     template-loader-path: "classpath:/templates"
     suffix: ".ftl"
   datasource:
-    url: ${DB_UR:jdbc:mysql://localhost:3306/post_portal}
-    username: ${DB_USERNAME:root}
-    password: ${DB_PASSWORD:root}
+    url: ${DB_UR:jdbc:postgresql://localhost:5432/post_portal}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:1234}
 
 admin:
   default:

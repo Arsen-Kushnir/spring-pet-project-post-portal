@@ -8,4 +8,4 @@ Spring pet project for publishing articles!
 - Maven
 
 #### Database
-- MySQL (8.0+) 
+- PostgreSQL

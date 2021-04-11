@@ -74,7 +74,7 @@ public class PostController {
 
         postService.update(createPostDto, id);
 
-        return "redirect:/users/account";
+        return "redirect:/accounts/index";
     }
 
     @PostMapping("/delete/{id}")
@@ -82,6 +82,6 @@ public class PostController {
 
         postService.deleteById(id);
 
-        return "redirect:/users/account";
+        return "redirect:/accounts/index";
     }
 }
