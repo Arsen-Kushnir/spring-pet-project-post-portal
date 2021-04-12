@@ -21,4 +21,7 @@ public class CreatePostDto {
 
     @NotBlank(message = "Should not be empty!")
     private String fullText;
+
+    @NotBlank(message = "Should not be empty!")
+    private String pictureUrl;
 }

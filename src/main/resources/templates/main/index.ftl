@@ -16,6 +16,7 @@
                     <#list posts as post>
                         <div class="col">
                             <div class="card shadow-sm">
+                                <img class="bd-placeholder-img card-img-top" width="100%" height="220px" src="${post.pictureUrl}" role="img">
                                 <div class="card-body">
                                     <h3>${post.title}</h3>
                                     <p class="card-text">${post.anons}</p>

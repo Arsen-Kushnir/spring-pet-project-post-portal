@@ -14,6 +14,7 @@ public class PostDtoMapper {
                 .title(post.getTitle())
                 .anons(post.getAnons())
                 .fullText(post.getFullText())
+                .pictureUrl(post.getPictureUrl())
                 .createdAt(post.getCreatedAt())
                 .build();
     }

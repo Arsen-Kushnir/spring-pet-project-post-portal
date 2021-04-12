@@ -25,5 +25,7 @@ public class Post {
 
     private String fullText;
 
+    private String pictureUrl;
+
     private LocalDateTime createdAt;
 }

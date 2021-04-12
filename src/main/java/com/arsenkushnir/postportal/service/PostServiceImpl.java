@@ -38,6 +38,7 @@ public class PostServiceImpl implements PostService{
                 .title(createPostDto.getTitle().trim())
                 .anons(createPostDto.getAnons().trim())
                 .fullText(createPostDto.getFullText().trim())
+                .pictureUrl(createPostDto.getPictureUrl())
                 .createdAt(LocalDateTime.now())
                 .build();
 
@@ -92,6 +93,7 @@ public class PostServiceImpl implements PostService{
         post.setTitle(createPostDto.getTitle().trim());
         post.setAnons(createPostDto.getAnons().trim());
         post.setFullText(createPostDto.getFullText().trim());
+        post.setPictureUrl(createPostDto.getPictureUrl());
 
         postRepository.save(post);
     }

@@ -13,6 +13,7 @@
             <div class="card-header">
                 <h2>${post.title}</h2>
             </div>
+            <img src="${post.pictureUrl}" class="rounded mx-auto d-block mt-3" width="380vh" height="200vh" >
             <div class="card-body">
                 <p class="card-text mt-2">${post.fullText}</p>
             </div>

@@ -23,5 +23,7 @@ public class ResponsePostDto {
 
     private String fullText;
 
+    private String pictureUrl;
+
     private LocalDateTime createdAt;
 }
